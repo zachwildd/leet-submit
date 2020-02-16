@@ -12,6 +12,8 @@
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
     crossorigin="anonymous">
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">
 </head>
 
 <body>
@@ -41,9 +43,9 @@
       </div>
     </div>
     <div class="row editor">
-      <div id="src-code" class="col-6 problem-editor">
+      <div id="src-code" class="col-12 col-lg-6 problem-editor">
       </div>
-      <div id="test-code" class="col-6 problem-response">
+      <div id="test-code" class="col-12 col-lg-6 problem-response">
       </div>
     </div>
     <div class="row">
@@ -61,6 +63,8 @@
     <br>
     <button id="submit-button">Submit</button>
   </div -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
   <script src="https://cdn.jsdelivr.net/npm/showdown"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
