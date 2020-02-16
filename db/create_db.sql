@@ -35,17 +35,6 @@ VALUES
 "const chai = require('chai'); const mocha = require('mocha'); const Solution = require('./src'); const solution = new Solution(); const assert = chai.assert; const expect = chai.expect; describe('Response', function() { it('the solution should return 0', function() { assert(solution.solution() === 0); }); });"
 );
 
-INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("String to Integer", "","","");
-INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("3Sum", "","","");
-INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("Next Permutation", "","","");
-INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("DFS", "","","");
-INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("BFS", "","","");
-INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("LRU Cache", "","","");
-INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("Flood fill", "","","");
-INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("Quicksort", "","","");
-INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("Bucket sort", "","","");
-INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("Radix sort", "","","");
-
 INSERT INTO problem 
 (
 `name`,
@@ -137,5 +126,15 @@ describe('Merge K Sorted Lists', function() {
 // From: https://github.com/jedwards1211/merge-k-sorted-arrays"
 );
 
+INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("String to Integer", "","","");
+INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("3Sum", "","","");
+INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("Next Permutation", "","","");
+INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("DFS", "","","");
+INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("BFS", "","","");
+INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("LRU Cache", "","","");
+INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("Flood fill", "","","");
+INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("Quicksort", "","","");
+INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("Bucket sort", "","","");
+INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("Radix sort", "","","");
 
 SELECT * FROM problem;
