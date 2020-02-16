@@ -131,9 +131,33 @@ function mergeTwoLists (l1, l2) {
   return prehead.next
 };
 ```",
-"",
-"/**\n* Do not modify this classes existing methods; */\n class Solution {\n constructor() {}\n \n solution() {\n/** WRITE YOUR CODE IN THIS METHOD */\n return 0;\n}\n}\n module.exports = Solution;",
-"const chai = require('chai'); const mocha = require('mocha'); const Solution = require('./src'); const solution = new Solution(); const assert = chai.assert; const expect = chai.expect; describe('Response', function() { it('the solution should return 0', function() { assert(solution.solution() === 0); }); });"
+"
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+
+/**
+ * @param {ListNode[]} lists
+ * @return {ListNode}
+ */
+var mergeKLists = function(lists) {
+  /** WRITE YOUR CODE HERE */
+};",
+"const chai = require('chai');
+const mocha = require('mocha'); 
+const Solution = require('./src');
+const solution = new Solution();
+const assert = chai.assert; 
+const expect = chai.expect; 
+describe('Response', function() { 
+  it('the solution should return 0', function() { 
+    assert(solution.solution() === 0); 
+  }); 
+});"
 );
 
 
