@@ -6,7 +6,7 @@ CREATE TABLE `problem` (
   `problem_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   `text` text NOT NULL,
-  `test` mediumtext,
+  `test` text,
   PRIMARY KEY (`problem_id`),
   UNIQUE KEY `problem_id_UNIQUE` (`problem_id`)
 );
