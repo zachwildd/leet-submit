@@ -50,6 +50,7 @@ class Judge {
     return new Promise(function (resolve, reject) {
       axios.post('http://localhost:' + port + '/judge', data)
           .then((result) => {
+            console.log('received response from judge: ' + JSON.stringify(result.data));
             let submissionResult = new SubmissionResult(
               result.data.output,
               result.data.outcome

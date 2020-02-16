@@ -30,9 +30,10 @@ submitController.post = async (req, res) => {
         return judge.executeSubmission(submission);
       })
       .then((submissionResult) => {
+        console.log('received submission result from judge in submit controller: ' + submissionResult.testOutcome);
         const response = {
-          'outcome': submissionResult.outcome,
-          'output': submissionResult.output
+          'outcome': submissionResult.testOutcome,
+          'output': submissionResult.testOutput
         };
         res.send(response);
       })

@@ -48,6 +48,7 @@ judgeController.post = async (req, res) => {
         if (stderr) {
           console.log('Tests failed: ' + stderr);
           inProgress = false;
+          let response = {};
           response.outcome = 'fail';
           response.output = stderr;
           res.status(200).send(response);
