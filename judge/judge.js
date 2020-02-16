@@ -1,7 +1,8 @@
 // npm modules
 var express = require('express'),
     bodyParser = require('body-parser'),
-    cors = require('cors');
+    cors = require('cors'),
+    config = require('./config/config');
 
 // create express app
 const app = express();
@@ -18,6 +19,6 @@ const judge = require('./routes/judge.routes');
 app.use('/judge', judge);
 
 // start express app
-app.listen(7331, () => {
-  console.log('Judge listening on 7331');
+app.listen(config.PORT, () => {
+  console.log('Judge listening on :' + config.PORT);
 })

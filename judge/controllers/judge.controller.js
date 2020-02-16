@@ -37,22 +37,22 @@ judgeController.post = async (req, res) => {
         // cleanup files
         cleanupFiles();
         // send response to client
-        if (error) {
-          console.log(error);
-          inProgress = false;
-          res.status(500).send(error);
-          return;
-        }
         if (stderr) {
-          console.log(stderr);
+          console.log('Tests failed: ' + stderr);
           inProgress = false;
           res.status(200).send(stderr);
           return;
         }
-        else {
-          console.log(stdout);
+        else if (stdout) {
+          console.log('Tests passed: ' + stdout);
           inProgress = false;
           res.status(200).send(stdout);
+          return;
+        }
+        else {
+          console.log('Error running tests: ' + error);
+          inProgress = false;
+          res.status(500).send('Internal error running tests.');
           return;
         }
       });
