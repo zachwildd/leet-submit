@@ -1,8 +1,16 @@
+// orm models
 const models = require('../models/');
+// submission domain model
+const Submission = require('../domain/submission');
+// submission queue for dispatching submissions to judges
+// const submissionQueueManager = require('../judge/submissionQueueManager.js');
+// judge
+const Judge = require('../judge/judge');
+const judge = new Judge(0);
 
 const submitController = {}
 
-// post a new submission for a problem
+// users posts a new submission for a problem
 submitController.post = async (req, res) => {
   // get the problem id & user's code from request
   const problemId = req.body.problemId;
@@ -10,17 +18,19 @@ submitController.post = async (req, res) => {
   console.log('problemId: ' + JSON.stringify(problemId));
   console.log('userCode: ' + JSON.stringify(userCode));
 
-  // get the test code for the problem from the database
+  // get the tests for the problem from the database
   const testCode = models.problem.findOne({
     where: {problem_id: problemId}
   })
       .then((problem) => {
-        // once we have the test code
-        res.send(problem.test);
-        // find a judge to test the submission
-        // get response from the judge
-        // return the results to the user
-        // do any other things with the results (keep record for user stats and so on)
+        // create new submission for problem
+        const submission = new Submission(problem.problem_id, 0, userCode, problem.test);
+        // add submission to queue with callback for resolution
+        // submissionQueueManager.executeSubmission(res, submission, resolveSubmission);
+        return judge.executeSubmission(submission);
+      })
+      .then((submissionResult) => {
+        console.log(submissionResult);
       })
       .catch((err) => {
         console.log(err);
