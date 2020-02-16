@@ -10,8 +10,8 @@ var submit = function() {
   xhr.open("POST", url+route, true);
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send(JSON.stringify({
-    src: src.value,
-    test: test.value 
+    problemId: 0,
+    userCode: src.value
   }));
 }
 
