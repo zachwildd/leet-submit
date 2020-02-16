@@ -92,17 +92,34 @@ Divide N lists into ceil(N/2) pairs and merge your way up.
  */
 var mergeKLists = function(lists) {
   /** WRITE YOUR CODE HERE */
-};",
+};
+module.exports = mergeKLists;
+",
 "const chai = require('chai');
 const mocha = require('mocha'); 
-const Solution = require('./src');
-const solution = new Solution();
+
+const merge = require('./src');
+
 const assert = chai.assert; 
 const expect = chai.expect; 
-describe('Response', function() { 
-  it('the solution should return 0', function() { 
-    assert(solution.solution() === 0); 
-  }); 
+
+describe('Merge K Sorted Lists', function() { 
+  it('returns empty array if there are no input arrays', function () {
+    expect(merge([])).to.deep.equal([])
+  })
+  it('returns single array intact', function () {
+    expect(merge([[1, 3, 5, 7]])).to.deep.equal([1, 3, 5, 7])
+  })
+  it('merges array into itself', function () {
+    expect(merge([[1, 3, 5, 7], [1, 3, 5, 7]])).to.deep.equal([1, 1, 3, 3, 5, 5, 7, 7])
+  })
+  it('works', function () {
+    expect(merge([
+      [1, 3, 5, 7],
+      [2, 4, 6, 8],
+      [0, 9, 10, 11],
+    ])).to.deep.equal([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+  })
 });"
 );
 
