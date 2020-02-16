@@ -7,7 +7,9 @@ const judgeController = {}
  */
 let inProgress = false;
 
-judgeController.status = async (req, res) => inProgress;
+judgeController.status = () => {
+  return inProgress;
+}
 
 judgeController.post = async (req, res) => {
     console.log('Received request to judge submission');

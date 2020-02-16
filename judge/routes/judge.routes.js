@@ -4,7 +4,10 @@ const judgeController = require('../controllers/judge.controller')
 const router = new Router()
 
 router.get('/status', (req, res) => {
-  res.status(200).send(judgeController.status());
+  let status = judgeController.status();
+  res.status(200).send({
+    'status': status
+  });
 });
 
 router.post('/', (req, res) => {
