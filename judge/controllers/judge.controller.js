@@ -8,6 +8,8 @@ const judgeController = {}
 let inProgress = false;
 
 judgeController.status = () => {
+  console.log('did receive request at /status');
+  console.log('responded with ' + inProgress);
   return inProgress;
 }
 
