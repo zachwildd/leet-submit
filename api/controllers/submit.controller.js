@@ -1,7 +1,7 @@
-const SubmitController = {}
+const submitController = {}
 
 // post a new submit
-SubmitController.post = async (req, res) => {
+submitController.post = async (req, res) => {
   const src = req.body.src;
   const test = req.body.test;
   console.log('src: ' + JSON.stringify(src));
@@ -9,4 +9,4 @@ SubmitController.post = async (req, res) => {
   res.send(req.body);
 }
 
-module.exports = SubmitController
+module.exports = submitController
