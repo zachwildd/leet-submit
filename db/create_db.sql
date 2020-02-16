@@ -76,61 +76,7 @@ Since JavaScript does not provide a standard built-in Priority Queue data struct
 Divide and conquer. Also O(N * log(K)).
 
 Divide N lists into ceil(N/2) pairs and merge your way up.
-
-```javascript
-/**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
- */
-/**
- * @param {ListNode[]} lists
- * @return {ListNode}
- */
-var mergeKLists = function(lists) {
-  while (lists.length > 1) {
-    lists.unshift(mergeTwoLists(lists.pop(), lists.pop()))
-  }
-  return lists[0] || []
-};
-
-/**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
- */
-/**
- * @param {ListNode} l1
- * @param {ListNode} l2
- * @return {ListNode}
- */
-function mergeTwoLists (l1, l2) {
-  let prehead = { next: null }
-  let p = prehead
-  let p1 = l1
-  let p2 = l2
-  while (p1 && p2) {
-    let pSel
-    if  (p1.val < p2.val) {
-      pSel = p1
-      p1 = p1.next
-    } else {
-      pSel = p2
-      p2 = p2.next
-    }
-    p.next = pSel
-    p = pSel
-  }
-
-  p.next = p1 || p2
-
-  return prehead.next
-};
-```",
+",
 "
 /**
  * Definition for singly-linked list.
