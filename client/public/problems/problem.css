@@ -1,0 +1,33 @@
+#problem {
+  text-align: center; 
+ }
+ 
+ /* text area for new problem's title */
+ #problem-title {
+   height: 25px;
+   width: 70%;
+   font-size: 20px;
+ 
+   resize: none;
+   outline: none;
+   overflow: hidden; /* stops scrollbar from showing */
+ }
+ 
+ /* text area for new problem's body */
+ .code-area {
+   height: 40%;
+   width: 70%;
+   font-size: 20px;
+   
+   resize: none;
+   outline: none;
+ }
+ 
+ /* button that will save the problem when finished */
+ #submit-button {
+   height: 25px;
+   width: 200px;
+   font-size: 20px;
+ }
+ 
+ 
