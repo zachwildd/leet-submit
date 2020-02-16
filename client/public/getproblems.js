@@ -1,6 +1,6 @@
 // request to get all the problems in the db
 var url = "http://localhost:9001"
-var route = "/problems"
+var route = "/problems/all"
 var xhr = new XMLHttpRequest()
 
 // called after the get-problems response is received
@@ -13,7 +13,7 @@ var displayProblems = function(problemsArr) {
     let a = document.createElement('a')
     a.innerHTML = name
     a.className = 'problem'
-    a.href = 'problem/problem.html?' + id
+    a.href = 'problems/problem.html?' + id
     let li = document.createElement('li')
     li.appendChild(a)
     problems.append(li)
