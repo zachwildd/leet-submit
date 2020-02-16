@@ -26,17 +26,25 @@ judgeController.post = async (req, res) => {
 
       // run mocha tests
       const { exec } = require("child_process");
-      await exec("mocha code/test.js", (error, stdout, stderr) => {
+      await exec("mocha " + thisDir + "/code/test.js", (error, stdout, stderr) => {
         // cleanup files
         cleanupFiles();
+        // send response to client
         if (error) {
-          res.send(error);
+          console.log(error);
+          // res.send(error);
+          // return;
         }
         if (stderr) {
+          console.log(stderr);
           res.send(stderr);
+          return;
         }
-        // send test results
-        res.send(stdout);
+        else {
+          console.log(stdout);
+          res.send(stdout);
+          return;
+        }
       });
   }
   catch (err) {
