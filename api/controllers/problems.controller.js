@@ -35,6 +35,7 @@ problemsController.get = async (req, res) => {
           'problemId': problem.problem_id,
           'name': problem.name,
           'text': problem.text,
+          'defaultCode': problem.default_code,
           'testCode': problem.test
         };
         console.log(problemData);
