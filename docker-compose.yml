@@ -1,5 +1,13 @@
 version: "3"
 services:
+  db:
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - jhacks-judge-db-volume:/var/lib/mysql
   nginx:
     restart: "always"
     image: "nginx:latest"
@@ -20,3 +28,5 @@ services:
       context: ./client
     ports:
       - "1337:1337"
+volumes:
+  jhacks-judge-db-volume:
