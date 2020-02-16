@@ -41,16 +41,24 @@ judgeController.post = async (req, res) => {
         // cleanup files
         cleanupFiles();
         // send response to client
+        let response = {
+          outcome: '',
+          output: ''
+        };
         if (stderr) {
           console.log('Tests failed: ' + stderr);
           inProgress = false;
-          res.status(200).send(stderr);
+          response.outcome = 'fail';
+          response.output = stderr;
+          res.status(200).send(response);
           return;
         }
         else if (stdout) {
           console.log('Tests passed: ' + stdout);
           inProgress = false;
-          res.status(200).send(stdout);
+          response.outcome = 'success';
+          response.output = stdout;
+          res.status(200).send(response);
           return;
         }
         else {

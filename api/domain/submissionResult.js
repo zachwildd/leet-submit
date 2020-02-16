@@ -1,6 +1,7 @@
 class SubmissionResult {
-  constructor(testOutput) {
+  constructor(testOutput, testOutcome) {
     this.testOutput = testOutput;
+    this.testOutcome = testOutcome;
   }
 }
 

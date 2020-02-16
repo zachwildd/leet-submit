@@ -51,7 +51,8 @@ class Judge {
       axios.post('http://localhost:' + port + '/judge', data)
           .then((result) => {
             let submissionResult = new SubmissionResult(
-              result.data
+              result.data.output,
+              result.data.outcome
             );
             resolve(submissionResult);
           })
