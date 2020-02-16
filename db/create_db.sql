@@ -24,7 +24,7 @@ INSERT INTO problem
 (
 `name`,
 `text`,
-`default_text`,
+`default_code`,
 `test`
 ) 
 VALUES 
