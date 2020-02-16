@@ -15,7 +15,7 @@ var submit = function() {
       let res = JSON.parse(this.responseText);
       let staus = res.status;
       let outcome = res.outcome;
-      console.log(outcome);
+      console.log(outcome); // "fail" if tests fail, "success" otherwise
       test.innerText = res.output;
       console.log(res)
     } else {

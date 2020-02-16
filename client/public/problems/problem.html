@@ -32,15 +32,12 @@
     </div>
   </nav>
   <div class="container-fluid">
-    <div class="row text-center">
-      <div class="col-12 text-center">
-        <h1 id="problem-title" class="display-5" style="margin: auto">Problem</h1>
+    <div class="row">
+      <div class="col-12 ">
+        <h1 id="problem-title" class="display-5 text-center" style="margin: auto">Problem</h1>
         <hr class="lead" />
       </div>
-      <div class="col-12">
-        <p id="problem-text">
-
-        </p>
+      <div id="problem-text" class="col-12">
       </div>
     </div>
     <div class="row editor">
@@ -49,8 +46,11 @@
       <div id="test-code" class="col-6 problem-response">
       </div>
     </div>
-    <div class="col-12">
-      <button id="submit-button">Submit</button>
+    <div class="row">
+      <div class="col-12" style="padding: 0">
+        <a id="submit-button" class="btn btn-success">Submit</a>
+        <!-- <button id="submit-button">Submit</button> -->
+      </div> 
     </div>
   </div>
 
@@ -61,7 +61,7 @@
     <br>
     <button id="submit-button">Submit</button>
   </div -->
-
+  <script src="https://cdn.jsdelivr.net/npm/showdown"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>

@@ -3,7 +3,7 @@
  }
  
  /* text area for new problem's title */
- #problem-title {
+ /* #problem-title {
    height: 25px;
    width: 70%;
    font-size: 20px;
@@ -11,7 +11,7 @@
    resize: none;
    outline: none;
    overflow: hidden; /* stops scrollbar from showing */
- }
+ } */
  
  /* text area for new problem's body */
  .code-area {
@@ -24,10 +24,11 @@
  }
  
  /* button that will save the problem when finished */
- #submit-button {
-   height: 25px;
-   width: 200px;
-   font-size: 20px;
- }
+#submit-button {
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: 0 !important;
+}
  
  

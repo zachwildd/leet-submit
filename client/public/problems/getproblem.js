@@ -1,4 +1,4 @@
-
+const converter = new showdown.Converter();
 // get problem with id in window
 var getProblem = function(id) {
   var id = window.location.href.split("?")[1]
@@ -37,9 +37,11 @@ var displayProblem = function(problemdata) {
     defaultCode = '',
     testCode = ''
   } = problemdata
+
+  text = converter.makeHtml(text);
   
   problemNameEle.innerText = name
-  problemTextEle.innerText = text
+  problemTextEle.innerHTML = text
   userCodeEle.innerHTML = defaultCode
   testCodeEle.innerHTML = testCode 
   setupEditor();

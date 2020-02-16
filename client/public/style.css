@@ -1,16 +1,17 @@
 .editor {
   border: 1px solid black;
-  border-radius: 5px;
   margin-right: 2em;
   margin-left: 2em;
 }
 .problem-editor {
-  height: 80vh;
   border-right: 1px solid black;
 }
 
 .problem-editor, .problem-response {
   padding: 0 !important;
+  height: 80vh;
+  max-height: 80vh;
+  overflow: scroll;
 }
 
 .problem-editor > textarea, .problem-response > textarea {
