@@ -1,0 +1,30 @@
+{
+    "workbench.editor.enablePreview": false,
+    "files.autoSave": "afterDelay",
+    "extensions.ignoreRecommendations": false,
+    "debug.node.autoAttach": "on",
+    "html.format.wrapLineLength": 80,
+    "editor.tabSize": 2,
+    "editor.tabCompletion": "on",
+    "window.zoomLevel": 1,
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "vim.useCtrlKeys": true,
+    "vim.insertModeKeyBindings": [],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["Tab"],
+            "after": ["i"]
+        }
+    ],
+    "vim.otherModesKeyBindings": [
+        {
+            "before": ["ctrl", "S-Tab"],
+            "after": ["<", "g", "v"]
+        },
+        {
+            "before": ["ctrl", "Tab"],
+            "after": [">", "g", "v"]
+        }
+    ]   
+}
