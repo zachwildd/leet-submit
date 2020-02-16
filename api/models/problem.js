@@ -15,6 +15,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT(),
       allowNull: false,
     },
+    default_code: {
+      type: DataTypes.TEXT(),
+    },
     test: {
       type: DataTypes.TEXT()
     }
