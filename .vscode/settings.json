@@ -6,7 +6,7 @@
     "html.format.wrapLineLength": 80,
     "editor.tabSize": 2,
     "editor.tabCompletion": "on",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": -1,
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": false,
     "vim.useCtrlKeys": true,
