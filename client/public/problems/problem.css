@@ -24,7 +24,7 @@
  }
  
  /* button that will save the problem when finished */
-#submit-button {
+#submit-button, #test-button {
   width: 100%;
   padding-top: 1em;
   padding-bottom: 1em;

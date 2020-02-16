@@ -47,6 +47,10 @@ var displayProblem = function(problemdata) {
   setupEditor();
 }
 
+/**
+ * Sets up the Ace editor
+ *
+ */
 function setupEditor() {
   var editor = ace.edit("src-code");
   editor.setTheme("ace/theme/monokai");
