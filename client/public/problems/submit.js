@@ -7,12 +7,21 @@ var route = "/submit";
 var xhr = new XMLHttpRequest();
 
 var submit = function() {
+  var problemId = window.location.href.split("?")[1]
   xhr.open("POST", url+route, true);
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send(JSON.stringify({
-    problemId: 0,
+    problemId,
     userCode: src.value
   }));
+  xhr.onreadystatechange = function() {
+    if (this.status === 200) {
+      let res = JSON.parse(this.responseText || '{}')
+      console.log(res)
+    } else {
+      console.error(`Error: ${this.status} - ${this.responseText || '(No Response Text)'}`)
+    }
+  }
 }
 
 submitButton.onclick = submit;

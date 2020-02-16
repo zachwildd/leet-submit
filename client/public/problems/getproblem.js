@@ -1,18 +1,3 @@
-var displayProblem = function(problemdata) {
-  console.log(problemdata)
-  // element that we will add the problem under
-  let problemNameEle = document.getElementById('problem-title')
-  let userCodeEle = document.getElementById('src-code')
-  let testCodeEle = document.getElementById('test-code')
-
-  let name = problemdata['name']
-  let userCode = problemdata['userCode']
-  let testCode = problemdata['testCode']
-  
-  problemNameEle.innerHTML = name
-  userCodeEle.innerHTML = userCode
-  testCodeEle.innerHTML = testCode 
-}
 
 // get problem with id in window
 var getProblem = function(id) {
@@ -29,6 +14,45 @@ var getProblem = function(id) {
   };
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send();
+}
+
+// Display the problem information in the editor
+var displayProblem = function(problemdata) {
+  console.log(problemdata)
+  const TITLE = 'problem-title'
+  const PROBLEM_TEXT = 'problem-text'
+  const USER_CODE = 'src-code'
+  const TEST_CODE = 'test-code'
+  // element that we will add the problem under
+  let problemNameEle = document.getElementById(TITLE)
+  let problemTextEle = document.getElementById(PROBLEM_TEXT)
+  let userCodeEle = document.getElementById(USER_CODE)
+  let testCodeEle = document.getElementById(TEST_CODE)
+
+  // 
+  let {
+    name = 'Anonymous Problem',
+    problemId,
+    text = 'No Description Available',
+    defaultCode = '',
+    testCode = ''
+  } = problemdata
+  
+  problemNameEle.innerText = name
+  problemTextEle.innerText = text
+  userCodeEle.innerHTML = defaultCode
+  testCodeEle.innerHTML = testCode 
+  setupEditor();
+}
+
+function setupEditor() {
+  var editor = ace.edit("src-code");
+  editor.setTheme("ace/theme/monokai");
+  editor.session.setMode("ace/mode/javascript");
+
+  var test = ace.edit("test-code");
+  test.setTheme("ace/theme/monokai");
+  test.session.setMode("ace/mode/javascript");
 }
 
 window.onload = getProblem

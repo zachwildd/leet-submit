@@ -15,6 +15,7 @@ var displayProblems = function(problemsArr) {
     a.className = 'problem'
     a.href = 'problems/problem.html?' + id
     let li = document.createElement('li')
+    li.classList.add('list-group-item')
     li.appendChild(a)
     problems.append(li)
   })
@@ -32,5 +33,4 @@ var getProblems = function() {
   xhr.setRequestHeader('Content-Type', 'application/json')
   xhr.send()
 }
-
 window.onload = getProblems

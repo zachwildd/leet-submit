@@ -4,25 +4,79 @@
   <title>problems</title>
   <link rel="stylesheet" type="text/css" href="../../style.css">
   <link rel="stylesheet" type="text/css" href="problem.css">
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
 </head>
 
 <body>
 
-  <div id="title" style="font-size: 40px; text-align: center">
-    <a href="../../index.html"><span>Problem</span></a>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">1337</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto">
+        <!-- <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a> -->
+        <!-- <a class="nav-item nav-link" href="#">Features</a> -->
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row text-center">
+      <div class="col-12 text-center">
+        <h1 id="problem-title" class="display-5" style="margin: auto">Problem</h1>
+        <hr class="lead" />
+      </div>
+      <div class="col-12">
+        <p id="problem-text">
+
+        </p>
+      </div>
+    </div>
+    <div class="row editor">
+      <div id="src-code" class="col-6 problem-editor">
+      </div>
+      <div id="test-code" class="col-6 problem-response">
+      </div>
+    </div>
+    <div class="col-12">
+      <button id="submit-button">Submit</button>
+    </div>
   </div>
 
-  <div id="problem">
-    <textarea id="problem-title" rows="1"></textarea>
-    <br>
+  <!--div id="problem">
     <textarea class="code-area" id="src-code"></textarea>
     <br>
     <textarea class="code-area" id="test-code"></textarea>
     <br>
     <button id="submit-button">Submit</button>
-  </div>
-  
+  </div -->
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+    <script src="https://pagecdn.io/lib/ace/1.4.8/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" src="../getproblems.js"></script>
   <script type="text/javascript" src="./submit.js"></script>
+  <script type="text/javascript" src="./getproblem.js"></script>
 
 </body>
 
