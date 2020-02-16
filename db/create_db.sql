@@ -35,6 +35,17 @@ VALUES
 "const chai = require('chai'); const mocha = require('mocha'); const Solution = require('./src'); const solution = new Solution(); const assert = chai.assert; const expect = chai.expect; describe('Response', function() { it('the solution should return 0', function() { assert(solution.solution() === 0); }); });"
 );
 
+INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("String to Integer", "","","");
+INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("3Sum", "","","");
+INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("Next Permutation", "","","");
+INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("DFS", "","","");
+INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("BFS", "","","");
+INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("LRU Cache", "","","");
+INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("Flood fill", "","","");
+INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("Quicksort", "","","");
+INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("Bucket sort", "","","");
+INSERT INTO problem (`name`,`text`,`default_code`,`test`) VALUES ("Radix sort", "","","");
+
 INSERT INTO problem 
 (
 `name`,
@@ -76,6 +87,8 @@ Since JavaScript does not provide a standard built-in Priority Queue data struct
 Divide and conquer. Also O(N * log(K)).
 
 Divide N lists into ceil(N/2) pairs and merge your way up.
+
+From: https://github.com/crimx/leetcope/blob/master/problems/023.%20Merge%20k%20Sorted%20Lists.md
 ",
 "
 /**
@@ -120,7 +133,8 @@ describe('Merge K Sorted Lists', function() {
       [0, 9, 10, 11],
     ])).to.deep.equal([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
   })
-});"
+});
+// From: https://github.com/jedwards1211/merge-k-sorted-arrays"
 );
 
 
